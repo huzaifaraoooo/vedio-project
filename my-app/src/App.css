@@ -41,3 +41,20 @@ h2 i,
 .portrait img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.92) contrast(1.08) saturate(.9);transition:transform .6s ease,filter .6s ease}
 .portrait:hover img{transform:scale(1.015);filter:brightness(.95) contrast(1.08) saturate(.92)}
 @media(max-width:800px){.portrait img{object-position:center center}}
+
+/* Contact form readability and submission states */
+.email-link{font-size:clamp(20px,2.4vw,34px)}
+.contact-form,.contact-form input,.contact-form textarea,.contact-form button,.field-error,.form-status{font-family:var(--body-font)}
+.contact-form label{display:block;font-size:12px;font-weight:500;letter-spacing:.12em;line-height:1.4;text-transform:uppercase}
+.form-field+.form-field{margin-top:18px}
+.contact-form input,.contact-form textarea{width:100%;color:var(--white);background:transparent;border:0;border-bottom:1px solid rgba(244,244,239,.25);padding:16px 0;margin:0;font-size:17px;line-height:1.5;outline:none;resize:vertical;transition:border-color .25s}
+.contact-form textarea{min-height:150px}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted);font-size:16px;opacity:.75}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--lime)}
+.contact-form input:disabled,.contact-form textarea:disabled{opacity:.65}
+.field-error{display:block;min-height:19px;padding-top:4px;color:var(--lime);font-size:13px;line-height:1.4;text-transform:none;letter-spacing:0}
+.contact-form button{font-size:12px;font-weight:500;letter-spacing:.14em}
+.contact-form button:disabled{cursor:wait;opacity:.65}
+.form-status{font-size:14px;line-height:1.6;margin-top:18px}.form-status.success{color:var(--lime)}.form-status.error{color:var(--white)}.form-status a{color:var(--lime);text-decoration:underline;text-underline-offset:3px}
+.honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+@media(max-width:800px){.contact-form input,.contact-form textarea{font-size:16px}.contact-form input::placeholder,.contact-form textarea::placeholder{font-size:16px}}
