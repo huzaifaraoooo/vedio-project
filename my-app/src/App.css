@@ -58,3 +58,10 @@ h2 i,
 .form-status{font-size:14px;line-height:1.6;margin-top:18px}.form-status.success{color:var(--lime)}.form-status.error{color:var(--white)}.form-status a{color:var(--lime);text-decoration:underline;text-underline-offset:3px}
 .honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 @media(max-width:800px){.contact-form input,.contact-form textarea{font-size:16px}.contact-form input::placeholder,.contact-form textarea::placeholder{font-size:16px}}
+
+/* About section alignment refinement */
+.about-layout{align-items:start;column-gap:clamp(48px,5vw,64px)}
+.about-copy{align-self:start;margin-top:0;padding-top:0;transform:none}
+.about-copy p:first-child{margin-top:0}
+.portrait img{object-position:center top}
+@media(max-width:800px){.about-layout{column-gap:0}.portrait img{object-position:center top}}
