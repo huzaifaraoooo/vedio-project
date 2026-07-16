@@ -1,0 +1,8 @@
+import { useState } from 'react'
+
+export default function About() {
+  const [missing, setMissing] = useState(false)
+  return <section className="section about" id="about"><div className="section-label">01 / About</div><div className="about-main"><p className="eyebrow" data-reveal>Developer profile</p><h2 data-reveal>I build digital systems<br />with <i>clarity &amp; intent.</i></h2><div className="about-layout"><div className="portrait" data-media>{!missing && <img src="/picture/portrait.png" alt="Portrait of Rao Huzaifa holding a paint brush" loading="lazy" onError={() => setMissing(true)} />} {missing && <div className="portrait-fallback"><span>RH</span><small>Portrait temporarily<br />unavailable</small></div>}</div><div className="about-copy" data-reveal><p>I'm Rao Huzaifa, a Full-Stack Web Developer based in Lahore, Pakistan, specializing in React (Vite), Node.js, Express.js and MySQL. I build modern, responsive and scalable web applications with a strong focus on clean code, performance and user experience.
+
+I enjoy turning ideas into real-world digital products by developing intuitive user interfaces, secure backend systems and reliable REST APIs. I'm always learning new technologies, improving my skills and building solutions that are practical, efficient and ready for real-world use.</p></div></div><dl className="details-grid" data-reveal><div><dt>Name</dt><dd>Rao Huzaifa</dd></div><div><dt>Based in</dt><dd>Lahore, Pakistan</dd></div><div><dt>Focus</dt><dd>Full-Stack Development</dd></div><div><dt>Availability</dt><dd><i />Open to Opportunities</dd></div></dl></div></section>
+}

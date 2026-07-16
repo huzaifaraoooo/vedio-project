@@ -1,0 +1,1 @@
+export default function Footer(){return <footer><div className="footer-word">RAO.</div><div className="footer-bottom"><span>© 2026 RAO HUZAIFA</span><span>LAHORE, PAKISTAN / AVAILABLE WORLDWIDE</span><a href="#top">BACK TO TOP ↑</a></div></footer>}

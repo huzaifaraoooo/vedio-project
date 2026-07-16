@@ -1,0 +1,2 @@
+import { useEffect, useRef } from 'react'
+export default function MouseGlow(){const ref=useRef(null);useEffect(()=>{if(!matchMedia('(pointer:fine)').matches)return;let frame;const move=e=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{ref.current?.style.setProperty('--x',`${e.clientX}px`);ref.current?.style.setProperty('--y',`${e.clientY}px`)})};addEventListener('pointermove',move);return()=>{removeEventListener('pointermove',move);cancelAnimationFrame(frame)}},[]);return <div ref={ref} className="mouse-glow" aria-hidden="true"/>}
